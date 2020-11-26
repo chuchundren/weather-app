@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tNu-f4-H79">
-                                <rect key="frame" x="100" y="420.5" width="259" height="34"/>
+                                <rect key="frame" x="100" y="450.5" width="259" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="0Fi-Ps-S0a"/>
                                 </constraints>
@@ -27,7 +27,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1kk-9Q-eAR">
-                                <rect key="frame" x="100" y="353.5" width="259" height="60"/>
+                                <rect key="frame" x="100" y="383.5" width="259" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="PRE-ND-Hwi"/>
                                 </constraints>
@@ -36,7 +36,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TUi-ED-T8g">
-                                <rect key="frame" x="87.5" y="133.5" width="200" height="200"/>
+                                <rect key="frame" x="87.5" y="163.5" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="OJP-wL-Y8V"/>
                                     <constraint firstAttribute="width" constant="200" id="SdB-HU-j4D"/>
@@ -48,10 +48,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="lj8-v7-A6z">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="lj8-v7-A6z" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4ss-MP-Ba7"/>
                             <constraint firstItem="tNu-f4-H79" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="A06-fD-JAh"/>
                             <constraint firstItem="1kk-9Q-eAR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="D7A-zm-IcX"/>
                             <constraint firstItem="tNu-f4-H79" firstAttribute="trailing" secondItem="1kk-9Q-eAR" secondAttribute="trailing" id="DXR-4A-upR"/>
@@ -59,9 +63,10 @@
                             <constraint firstItem="Wmx-U7-SRj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Lr5-SN-NsM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Wmx-U7-SRj" secondAttribute="bottom" constant="20" id="UFg-oI-Euh"/>
                             <constraint firstItem="TUi-ED-T8g" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XPU-KD-8Cg"/>
-                            <constraint firstItem="TUi-ED-T8g" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-100" id="ZhE-6f-X4f"/>
+                            <constraint firstItem="TUi-ED-T8g" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-70" id="ZhE-6f-X4f"/>
                             <constraint firstItem="tNu-f4-H79" firstAttribute="top" secondItem="1kk-9Q-eAR" secondAttribute="bottom" constant="7" id="gpb-pC-OSj"/>
                             <constraint firstItem="1kk-9Q-eAR" firstAttribute="top" secondItem="TUi-ED-T8g" secondAttribute="bottom" constant="20" id="jZI-dO-Zp0"/>
+                            <constraint firstItem="lj8-v7-A6z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="t8d-GS-8bi"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="EQ5-dM-eP6">
@@ -72,6 +77,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="activityIndicator" destination="lj8-v7-A6z" id="yo5-J5-4xG"/>
                         <outlet property="placeAndDateLabel" destination="Wmx-U7-SRj" id="8FP-ZW-waF"/>
                         <outlet property="temperatureLabel" destination="1kk-9Q-eAR" id="4XR-Bl-xrK"/>
                         <outlet property="weatherImage" destination="TUi-ED-T8g" id="KRP-qq-pF4"/>

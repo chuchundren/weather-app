@@ -25,14 +25,14 @@ class SearchViewController: UIViewController {
         tableView.dataSource = self
     }
     
-
+    
     // MARK: - Navigation
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let navigationController = segue.destination as? UINavigationController,
               let mainViewController = navigationController.viewControllers.first as? MainViewController,
               let index = tableView.indexPathForSelectedRow?.row else { return }
-        mainViewController.defaultCity = cityArray[index]
+        mainViewController.fetchWeather(for: cityArray[index])
     }
 }
 

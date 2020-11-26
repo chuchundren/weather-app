@@ -40,3 +40,25 @@ struct Main2: Codable {
         case temperature = "temp"
     }
 }
+
+{"coord":
+    {"lon":-0.13,"lat":51.51},
+    "weather":
+    [{"id":800,"main":"Clear","description":"clear sky","icon":"01n"}],
+    "base":"stations",
+    "main":
+    {"temp":278.68,
+        "feels_like":275.82,
+        "temp_min":277.59,
+        "temp_max":280.37,
+        "pressure":1021,
+        "humidity":72},
+    "visibility":10000,
+    "wind":{"speed":1.44,"deg":35},
+    "clouds":{"all":0},
+    "dt":1606426619,
+    "sys":{"type":3,"id":268730,"country":"GB","sunrise":1606376236,"sunset":1606406340},
+    "timezone":0,
+    "id":2643743,
+    "name":"London",
+    "cod":200}

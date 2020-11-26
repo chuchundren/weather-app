@@ -21,7 +21,7 @@ class NetworkService {
                 do {
                     let forecast = try JSONDecoder().decode(Forecast.self, from: data)
                     completion(.success(forecast))
-                    print(forecast.cityName)
+                    print(forecast.city)
                 } catch {
                     print(error)
                     completion(.failure(error))

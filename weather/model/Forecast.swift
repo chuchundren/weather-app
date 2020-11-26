@@ -1,8 +1,8 @@
 //
-//  Weather.swift
+//  Forecast.swift
 //  weather
 //
-//  Created by Дарья on 18/03/2020.
+//  Created by Дарья on 27.11.2020.
 //  Copyright © 2020 chuchundren. All rights reserved.
 //
 
@@ -12,21 +12,18 @@ struct Forecast: Codable {
     let main: Main
     let date: Int
     let weather: [Weather]
+    let city: String
  
     enum CodingKeys: String, CodingKey {
         case main
         case date = "dt"
         case weather
+        case city = "name"
     }
 }
 
 struct Weather: Codable {
     let description: String
-    
-    init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        description = try values.decode(String.self, forKey: .description)
-    }
     
     enum CodingKeys: String, CodingKey {
         case description = "main"
@@ -34,16 +31,9 @@ struct Weather: Codable {
 }
 
 struct Main: Codable {
-    let temperature: Double
+    let temperature: Float
     
     enum CodingKeys: String, CodingKey {
         case temperature = "temp"
     }
 }
-//
-//extension Weather {
-//    init(from decoder: Decoder) throws {
-//        let values = try decoder.container(keyedBy: CodingKeys.self)
-//        description = try values.decode(String.self, forKey: .description)
-//    }
-//}
