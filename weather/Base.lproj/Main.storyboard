@@ -70,6 +70,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="EQ5-dM-eP6">
+                        <barButtonItem key="leftBarButtonItem" image="location" catalog="system" id="ZhX-6O-pYf">
+                            <connections>
+                                <action selector="findLocation:" destination="BYZ-38-t0r" id="heZ-nB-n1X"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Search city" id="B2M-6L-IRs">
                             <connections>
                                 <segue destination="mJ5-Jg-jM5" kind="show" id="TaO-Fk-dqi"/>
@@ -97,7 +102,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZRf-UZ-IfF">
-                                <rect key="frame" x="0.0" y="88" width="375" height="579"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="2Mv-Go-MA4">
@@ -113,29 +118,18 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Wp3-m1-rGm">
-                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="MNs-s0-GIW"/>
-                                </constraints>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hGj-DY-hre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="hGj-DY-hre" firstAttribute="trailing" secondItem="ZRf-UZ-IfF" secondAttribute="trailing" id="0Z8-Q4-v5D"/>
-                            <constraint firstItem="Wp3-m1-rGm" firstAttribute="leading" secondItem="hGj-DY-hre" secondAttribute="leading" id="33t-qU-aFZ"/>
                             <constraint firstItem="ZRf-UZ-IfF" firstAttribute="leading" secondItem="hGj-DY-hre" secondAttribute="leading" id="3mD-Qe-P4c"/>
                             <constraint firstItem="hGj-DY-hre" firstAttribute="bottom" secondItem="ZRf-UZ-IfF" secondAttribute="bottom" id="EwV-Dn-0fg"/>
-                            <constraint firstItem="Wp3-m1-rGm" firstAttribute="trailing" secondItem="hGj-DY-hre" secondAttribute="trailing" id="Ltm-lh-NWP"/>
-                            <constraint firstItem="Wp3-m1-rGm" firstAttribute="top" secondItem="hGj-DY-hre" secondAttribute="top" id="Pja-Tz-wWD"/>
-                            <constraint firstItem="ZRf-UZ-IfF" firstAttribute="top" secondItem="Wp3-m1-rGm" secondAttribute="bottom" id="esj-yS-MgR"/>
+                            <constraint firstItem="ZRf-UZ-IfF" firstAttribute="top" secondItem="hGj-DY-hre" secondAttribute="top" id="yrX-2x-qLW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="q1z-G7-SHF"/>
                     <connections>
-                        <outlet property="searchBar" destination="Wp3-m1-rGm" id="Xgg-Mw-8gc"/>
                         <outlet property="tableView" destination="ZRf-UZ-IfF" id="o5S-ft-TAP"/>
                     </connections>
                 </viewController>
@@ -151,10 +145,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="G1M-bj-SM1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -167,6 +157,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="location" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

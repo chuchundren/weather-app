@@ -28,3 +28,16 @@ extension Float {
         return Int(self - 273.15)
     }
 }
+
+extension String {
+    func replaceSpaceAndTrim() -> String {
+        var string = self
+            if string.contains(" ") {
+                let spaceIndex = string.firstIndex(of: " ")
+                string.remove(at: spaceIndex!)
+                string.insert(contentsOf: "%20", at: spaceIndex!)
+        }
+        string = string.trimmingCharacters(in: .whitespacesAndNewlines)
+        return string
+    }
+}
