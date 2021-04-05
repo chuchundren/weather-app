@@ -10,4 +10,4 @@ A common weather app. Gives you posibility to fetch weather for your current loc
 
 ## Screenshots
 
-![Screenshot] (https://raw.githubusercontent.com/chuchundren/weather-app/master/Simulator%20Screen%20Shot%20-%20iPhone%2011%20-%202021-03-31%20at%2015.52.47.png)
+![Screenshot](https://raw.githubusercontent.com/chuchundren/weather-app/master/Simulator%20Screen%20Shot%20-%20iPhone%2011%20-%202021-03-31%20at%2015.52.47.png)
